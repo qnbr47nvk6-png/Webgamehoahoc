@@ -2,26 +2,53 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <title>Thư viện trò chơi Hóa học</title>
+  <title>Webgame Hóa học</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🎮 Thư viện trò chơi Hóa học</h1>
-    <p>Ôn tập kiến thức Hóa học qua các trò chơi thú vị và hấp dẫn</p>
+    <h1>⚗️ Webgame Hóa học</h1>
+    <p>Ôn tập kiến thức Hóa học qua trò chơi thú vị và hấp dẫn</p>
   </header>
 
   <main>
     <h2>Danh sách trò chơi</h2>
-    <ul>
-      <li><a href="games/game1-wrapper.html">Trò chơi 1: Mario Hóa học</a></li>
-      <li><a href="games/game2.html">Trò chơi 2: đang cập nhật...</a></li>
-    </ul>
+    <div class="game-grid">
+      <!-- Card Game 1 -->
+      <div class="game-card">
+        <img src="assets/mario-thumb.jpg" alt="Mario dũng sĩ hóa học">
+        <div class="card-content">
+          <h3>Mario dũng sĩ hóa học</h3>
+          <p>Hóa thân thành Mario để vượt chướng ngại vật và trả lời câu hỏi hóa học.</p>
+          <a href="games/game1-wrapper.html" class="btn">Chơi ngay</a>
+        </div>
+      </div>
+
+      <!-- Card Game 2 -->
+      <div class="game-card">
+        <img src="assets/game2-thumb.jpg" alt="Tên game 2">
+        <div class="card-content">
+          <h3>Tên game 2</h3>
+          <p>Mô tả ngắn gọn về trò chơi 2.</p>
+          <a href="games/game2.html" class="btn">Chơi ngay</a>
+        </div>
+      </div>
+
+      <!-- Card Game 3 -->
+      <div class="game-card">
+        <img src="assets/game3-thumb.jpg" alt="Tên game 3">
+        <div class="card-content">
+          <h3>Tên game 3</h3>
+          <p>Mô tả ngắn gọn về trò chơi 3.</p>
+          <a href="games/game3.html" class="btn">Chơi ngay</a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Nguyễn Đức Hậu – Hóa học vui</p>
+    <p>© 2025 Webgame Hóa học – Nguyễn Đức Hậu</p>
   </footer>
 </body>
 </html>
