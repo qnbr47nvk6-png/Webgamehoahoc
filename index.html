@@ -8,36 +8,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Hero Section -->
   <header class="hero">
-    <h1 class="title-animated">GAME HÓA HỌC, CHƠI LÀ THÍCH</h1>
-    <p class="subtitle">Khám phá kiến thức Hóa học qua những trò chơi HTML5 thú vị</p>
-    <button id="themeToggle" class="btn ghost">🌙 Chuyển giao diện</button>
+    <div class="hero-content">
+      <h1 class="title-animated">GAME HÓA HỌC, CHƠI LÀ THÍCH</h1>
+      <p class="subtitle">Học mà chơi – Chơi mà học</p>
+      <button id="themeToggle" class="btn ghost">🌙 Chuyển giao diện</button>
+    </div>
+    <div class="hero-icons">
+      <span>🧪</span><span>🧬</span><span>⚗️</span><span>🔬</span><span>📘</span>
+    </div>
   </header>
 
+  <!-- Game Section -->
   <main>
     <h2 class="section-title">🎮 Danh sách trò chơi</h2>
     <div class="game-grid">
-      <!-- Game 1 -->
       <div class="game-card">
         <img src="assets/mario-thumb.png" alt="Mario dũng sĩ hóa học">
         <div class="card-content">
-          <h3>Mario dũng sĩ hóa học</h3>
+          <h3>Mario dũng sĩ hóa học <span class="badge">Mới</span></h3>
           <p>Hóa thân thành Mario để vượt chướng ngại vật và trả lời câu hỏi hóa học.</p>
           <a href="games/game1-wrapper.html" class="btn">Chơi ngay</a>
         </div>
       </div>
 
-      <!-- Game 2 -->
       <div class="game-card">
         <img src="assets/game2-thumb.png" alt="Game 2">
         <div class="card-content">
-          <h3>Cân bằng phương trình</h3>
+          <h3>Cân bằng phương trình <span class="badge hot">Hot</span></h3>
           <p>Ôn tập kỹ năng cân bằng phương trình hóa học qua mini quiz.</p>
           <a href="games/game2-wrapper.html" class="btn">Chơi ngay</a>
         </div>
       </div>
 
-      <!-- Game 3 -->
       <div class="game-card">
         <img src="assets/game3-thumb.png" alt="Game 3">
         <div class="card-content">
@@ -47,8 +51,28 @@
         </div>
       </div>
     </div>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>ℹ️ Giới thiệu</h2>
+      <p>Webgame Hóa học là dự án học tập sáng tạo, giúp học sinh yêu thích môn Hóa qua trò chơi tương tác. 
+      Các game được thiết kế đơn giản, dễ chơi, nhưng vẫn truyền tải kiến thức cốt lõi.</p>
+      <img src="assets/chemistry-banner.png" alt="Minh họa hóa học" class="about-img">
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2>📩 Liên hệ</h2>
+      <p>Nếu bạn có góp ý hoặc muốn đóng góp trò chơi mới, hãy liên hệ:</p>
+      <ul>
+        <li>Email: <a href="mailto:nguyen.duchau@example.com">nguyen.duchau@example.com</a></li>
+        <li>Facebook: <a href="#">facebook.com/webgamehoahoc</a></li>
+        <li>Zalo: 0123-456-789</li>
+      </ul>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 GAME HÓA HỌC, CHƠI LÀ THÍCH — Tác giả: Nguyễn Đức Hậu</p>
   </footer>
