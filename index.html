@@ -1,54 +1,57 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <title>Webgame Hóa học</title>
+  <title>GAME HÓA HỌC, CHƠI LÀ THÍCH</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>⚗️ Webgame Hóa học</h1>
-    <p>Ôn tập kiến thức Hóa học qua trò chơi HTML5</p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">⚗️ Webgame Hóa học</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Trang chủ</a></li>
+      <li><a href="games.html">Game mới</a></li>
+      <li><a href="about.html">Giới thiệu</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+    <button id="themeToggle" class="btn ghost">🌙</button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1 class="title-animated">GAME HÓA HỌC, CHƠI LÀ THÍCH</h1>
+    <p class="subtitle">Học mà chơi – Chơi mà học</p>
   </header>
 
-  <main>
-    <h2>Danh sách trò chơi</h2>
-    <div class="game-grid">
-      <!-- Card Game 1 -->
-      <div class="game-card">
-        <img src="assets/mario-thumb.jpg" alt="Mario dũng sĩ hóa học">
-        <div class="card-content">
-          <h3>Mario dũng sĩ hóa học</h3>
-          <p>Hóa thân thành Mario để vượt chướng ngại vật và trả lời câu hỏi hóa học.</p>
-          <a href="games/game1.html" class="btn">Chơi ngay</a>
-        </div>
-      </div>
-
-      <!-- Card Game 2 -->
-      <div class="game-card">
-        <img src="assets/game2-thumb.jpg" alt="Tên game 2">
-        <div class="card-content">
-          <h3>Tên game 2</h3>
-          <p>Mô tả ngắn gọn về trò chơi 2.</p>
-          <a href="games/game2.html" class="btn">Chơi ngay</a>
-        </div>
-      </div>
-
-      <!-- Card Game 3 -->
-      <div class="game-card">
-        <img src="assets/game3-thumb.jpg" alt="Tên game 3">
-        <div class="card-content">
-          <h3>Tên game 3</h3>
-          <p>Mô tả ngắn gọn về trò chơi 3.</p>
-          <a href="games/game3.html" class="btn">Chơi ngay</a>
-        </div>
-      </div>
+  <!-- Nội dung nổi bật -->
+  <main class="section">
+    <h2>🔥 Thông tin nổi bật</h2>
+    <div class="highlight">
+      <p><strong>Webgame Hóa học</strong> mang đến trải nghiệm học tập mới mẻ qua các trò chơi tương tác. 
+      Chúng tôi liên tục cập nhật game mới, cải tiến giao diện và bổ sung hình minh họa để việc học trở nên thú vị hơn.</p>
+      <ul>
+        <li>Ra mắt game mới: <strong>Mario dũng sĩ hóa học</strong></li>
+        <li>Cập nhật giao diện hiện đại, hỗ trợ Dark Mode</li>
+        <li>Thêm nhiều hình minh họa sinh động</li>
+      </ul>
     </div>
   </main>
 
   <footer>
-    <p>© 2025 Webgame Hóa học – Nguyễn</p>
+    <p>© 2025 GAME HÓA HỌC, CHƠI LÀ THÍCH — Tác giả: Nguyễn Đức Hậu</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      const root = document.documentElement;
+      const current = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+      toggle.textContent = current === 'light' ? '☀️' : '🌙';
+    });
+  </script>
 </body>
 </html>
