@@ -4,6 +4,8 @@
   --card: #ffffff;
   --primary: #2563eb;
   --accent: #9333ea;
+  --badge-new: #10b981;
+  --badge-hot: #f59e0b;
 }
 
 html[data-theme="dark"] {
@@ -21,12 +23,13 @@ body {
   color: var(--text);
 }
 
-/* Hero section */
+/* Hero */
 .hero {
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
+  position: relative;
 }
 .title-animated {
   font-family: Poppins, sans-serif;
@@ -42,10 +45,8 @@ body {
   0% { background-position: 0% }
   100% { background-position: 200% }
 }
-.subtitle {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
+.subtitle { margin-top: 10px; font-size: 1.2rem; }
+.hero-icons { margin-top: 20px; font-size: 24px; display: flex; justify-content: center; gap: 12px; }
 
 /* Section title */
 .section-title {
@@ -55,7 +56,7 @@ body {
   color: var(--primary);
 }
 
-/* Game grid */
+/* Game cards */
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -78,17 +79,18 @@ body {
   height: 180px;
   object-fit: cover;
 }
-.card-content {
-  padding: 16px;
+.card-content { padding: 16px; }
+.card-content h3 { margin: 0 0 8px; color: var(--primary); }
+.card-content p { margin: 0 0 12px; }
+.badge {
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 8px;
+  color: white;
 }
-.card-content h3 {
-  margin: 0 0 8px;
-  color: var(--primary);
-}
-.card-content p {
-  margin: 0 0 12px;
-  color: var(--text);
-}
+.badge.new { background: var(--badge-new); }
+.badge.hot { background: var(--badge-hot); }
 
 /* Buttons */
 .btn {
@@ -101,18 +103,4 @@ body {
   font-weight: 600;
   transition: opacity 0.2s ease;
 }
-.btn:hover { opacity: 0.85 }
-.btn.ghost {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.6);
-  color: white;
-}
-
-/* Footer */
-footer {
-  background: var(--card);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
+.btn
