@@ -1,0 +1,6 @@
+chemistry-games/
+ ├── index.html
+ ├── style.css
+ └── games/
+      ├── game1.html
+      ├── game2.html
