@@ -1,193 +1,65 @@
 <!doctype html>
 <html lang="vi" data-theme="light">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>GAME HÓA HỌC, CHƠI LÀ THÍCH</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Webgame Hóa học: Ôn tập kiến thức Hóa học qua trò chơi HTML5." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="nav">
-      <div class="brand">⚗️ Webgame Hóa học</div>
-      <div class="actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Đổi giao diện"><span>🌙</span></button>
-        <a class="icon-btn" href="#about" aria-label="Giới thiệu">ℹ️</a>
-      </div>
-    </div>
-
-    <div class="hero">
-      <h1 class="title-animated">GAME HÓA HỌC, CHƠI LÀ THÍCH</h1>
-      <p class="subtitle">Khám phá kiến thức Hóa học qua những trò chơi HTML5 thú vị</p>
-      <div class="hero-icons">
-        <span>🧪</span><span>🧫</span><span>🧬</span><span>🧲</span><span>📘</span>
-      </div>
-      <a href="#games" class="cta-btn" id="playCta">Bắt đầu chơi</a>
-    </div>
+  <header class="hero">
+    <h1 class="title-animated">GAME HÓA HỌC, CHƠI LÀ THÍCH</h1>
+    <p class="subtitle">Khám phá kiến thức Hóa học qua những trò chơi HTML5 thú vị</p>
+    <button id="themeToggle" class="btn ghost">🌙 Chuyển giao diện</button>
   </header>
 
   <main>
-    <section id="games" class="section">
-      <h2>🎮 Danh sách trò chơi</h2>
-
-      <div class="game-grid">
-        <!-- Game 1 -->
-        <article class="game-card">
-          <div class="thumb-wrap">
-            <img src="assets/mario-thumb.png" alt="Mario dũng sĩ hóa học" loading="lazy">
-            <span class="badge">Mới</span>
-          </div>
-          <div class="card-content">
-            <h3>Mario dũng sĩ hóa học</h3>
-            <p>Hóa thân thành Mario, vượt chướng ngại vật và trả lời câu hỏi hóa học thú vị.</p>
-            <div class="meta">
-              <span>⏱️ 5–10 phút</span>
-              <span>🧪 Lớp 8–10</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn play-btn" data-game="games/game1.html">Chơi ngay</button>
-              <a class="btn ghost" href="games/game1-wrapper.html" target="_blank" rel="noopener">Mở tab mới</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Game 2 (ví dụ, thay sau) -->
-        <article class="game-card">
-          <div class="thumb-wrap">
-            <img src="assets/game2-thumb.png" alt="Cân bằng phương trình" loading="lazy">
-            <span class="badge accent">Phổ biến</span>
-          </div>
-          <div class="card-content">
-            <h3>Cân bằng phương trình</h3>
-            <p>Ôn tập nhanh kỹ năng cân bằng phương trình hóa học bằng mini-quiz.</p>
-            <div class="meta">
-              <span>⏱️ 7–12 phút</span>
-              <span>🧪 Lớp 9–11</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn play-btn" data-game="games/game2.html">Chơi ngay</button>
-              <a class="btn ghost" href="games/game2.html" target="_blank" rel="noopener">Mở tab mới</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Game 3 (ví dụ, thay sau) -->
-        <article class="game-card">
-          <div class="thumb-wrap">
-            <img src="assets/game3-thumb.png" alt="Nhận diện hợp chất" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h3>Nhận diện hợp chất</h3>
-            <p>Phân nhóm và nhận diện hợp chất qua hình ảnh và ký hiệu hóa học.</p>
-            <div class="meta">
-              <span>⏱️ 6–10 phút</span>
-              <span>🧪 Lớp 8–10</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn play-btn" data-game="games/game3.html">Chơi ngay</button>
-              <a class="btn ghost" href="games/game3.html" target="_blank" rel="noopener">Mở tab mới</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="section alt">
-      <h2>Vì sao học hóa qua game?</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <h4>Hứng thú</h4>
-          <p>Trò chơi tạo động lực học tập tự nhiên, giúp ghi nhớ kiến thức lâu hơn.</p>
-        </div>
-        <div class="about-card">
-          <h4>Tương tác</h4>
-          <p>Phản hồi nhanh qua điểm số, câu hỏi, thử thách giúp người học tự đánh giá.</p>
-        </div>
-        <div class="about-card">
-          <h4>Linh hoạt</h4>
-          <p>Học trên mọi thiết bị, phù hợp nhiều trình độ và thời lượng học khác nhau.</p>
+    <h2 class="section-title">🎮 Danh sách trò chơi</h2>
+    <div class="game-grid">
+      <!-- Game 1 -->
+      <div class="game-card">
+        <img src="assets/mario-thumb.png" alt="Mario dũng sĩ hóa học">
+        <div class="card-content">
+          <h3>Mario dũng sĩ hóa học</h3>
+          <p>Hóa thân thành Mario để vượt chướng ngại vật và trả lời câu hỏi hóa học.</p>
+          <a href="games/game1-wrapper.html" class="btn">Chơi ngay</a>
         </div>
       </div>
-    </section>
 
-    <!-- Modal chơi game (iframe + loading) -->
-    <div id="gameModal" class="modal" aria-hidden="true">
-      <div class="modal-backdrop"></div>
-      <div class="modal-body" role="dialog" aria-label="Khung chơi game">
-        <button class="modal-close" aria-label="Đóng">✖</button>
-        <div class="loader">
-          <div class="spinner"></div>
-          <p>Đang tải trò chơi…</p>
+      <!-- Game 2 -->
+      <div class="game-card">
+        <img src="assets/game2-thumb.png" alt="Game 2">
+        <div class="card-content">
+          <h3>Cân bằng phương trình</h3>
+          <p>Ôn tập kỹ năng cân bằng phương trình hóa học qua mini quiz.</p>
+          <a href="games/game2-wrapper.html" class="btn">Chơi ngay</a>
         </div>
-        <iframe id="gameFrame" src="" title="Game HTML5" loading="eager"></iframe>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="game-card">
+        <img src="assets/game3-thumb.png" alt="Game 3">
+        <div class="card-content">
+          <h3>Nhận diện hợp chất</h3>
+          <p>Phân nhóm và nhận diện hợp chất qua hình ảnh và ký hiệu hóa học.</p>
+          <a href="games/game3-wrapper.html" class="btn">Chơi ngay</a>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="footer">
+  <footer>
     <p>© 2025 GAME HÓA HỌC, CHƠI LÀ THÍCH — Tác giả: Nguyễn Đức Hậu</p>
   </footer>
 
-  <audio id="clickSound" src="assets/click.mp3" preload="auto"></audio>
-
   <script>
-    // Toggle dark/light theme
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
       const root = document.documentElement;
-      const current = root.getAttribute('data-theme') || 'light';
-      const next = current === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', next);
-      // swap icon
-      themeToggle.innerHTML = next === 'dark' ? '<span>☀️</span>' : '<span>🌙</span>';
-    });
-
-    // Play CTA click sound
-    const clickSound = document.getElementById('clickSound');
-    const playCta = document.getElementById('playCta');
-    playCta.addEventListener('click', () => {
-      clickSound.currentTime = 0;
-      clickSound.play().catch(() => {});
-    });
-
-    // Modal + iframe loading
-    const modal = document.getElementById('gameModal');
-    const frame = document.getElementById('gameFrame');
-    const closeBtn = document.querySelector('.modal-close');
-    const loader = document.querySelector('.loader');
-
-    function openModal(url) {
-      modal.setAttribute('aria-hidden', 'false');
-      loader.style.display = 'flex';
-      frame.style.display = 'none';
-      frame.src = url;
-    }
-
-    frame.addEventListener('load', () => {
-      // Hide loader, show game when iframe finishes loading
-      loader.style.display = 'none';
-      frame.style.display = 'block';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      frame.src = '';
-      modal.setAttribute('aria-hidden', 'true');
-    });
-
-    document.querySelectorAll('.play-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        clickSound.currentTime = 0;
-        clickSound.play().catch(() => {});
-        openModal(btn.dataset.game);
-      });
-    });
-
-    // Close modal on backdrop click
-    document.querySelector('.modal-backdrop').addEventListener('click', () => {
-      frame.src = '';
-      modal.setAttribute('aria-hidden', 'true');
+      const current = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+      toggle.textContent = current === 'light' ? '☀️ Chuyển giao diện' : '🌙 Chuyển giao diện';
     });
   </script>
 </body>
