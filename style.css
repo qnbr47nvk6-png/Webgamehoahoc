@@ -1,99 +1,131 @@
+:root {
+  --bg: #f9fafb;
+  --text: #1f2937;
+  --card: #ffffff;
+  --primary: #2563eb;
+  --accent: #9333ea;
+  --badge-new: #10b981;
+  --badge-hot: #f59e0b;
+}
+
+html[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --card: #1e293b;
+  --primary: #60a5fa;
+  --accent: #a78bfa;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #f9fafb;
-  color: #1f2937;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-header {
-  background: linear-gradient(135deg, #2563eb, #9333ea);
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 12px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar .logo { font-weight: 700; color: var(--primary); font-size: 1.2rem; }
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 600; }
+.nav-links a:hover, .nav-links .active { color: var(--primary); }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
-  text-align: center;
-  padding: 40px 20px;
 }
-
-header h1 {
+.title-animated {
+  font-family: Poppins, sans-serif;
+  font-size: 2.8rem;
   margin: 0;
-  font-size: 2.5rem;
+  background: linear-gradient(90deg, #fff, #ffe082, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
 }
-
-header p {
-  margin-top: 10px;
-  font-size: 1.2rem;
+@keyframes shine {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
 }
+.subtitle { margin-top: 10px; font-size: 1.3rem; }
 
-main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+/* Sections */
+.section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+.section h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; color: var(--primary); }
+.section.alt { background: var(--card); }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
+/* Game cards */
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-
 .game-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--card);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 .game-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
-
 .game-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-
-.card-content {
-  padding: 20px;
+.card-content { padding: 16px; }
+.card-content h3 { margin: 0 0 8px; color: var(--primary); }
+.card-content p { margin: 0 0 12px; }
+.badge {
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 8px;
+  color: white;
 }
+.badge.new { background: var(--badge-new); }
+.badge.hot { background: var(--badge-hot); }
 
-.card-content h3 {
-  margin: 0 0 10px;
-  font-size: 1.4rem;
-  color: #2563eb;
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: #4b5563;
-  margin-bottom: 15px;
-}
-
+/* Buttons */
 .btn {
   display: inline-block;
-  background: #2563eb;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.btn:hover { opacity: 0.85 }
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
 }
 
-.btn:hover {
-  background: #1e40af;
-}
-
+/* Footer */
 footer {
-  background: #e5e7eb;
+  background: var(--primary);
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
   font-size: 0.9rem;
+  color: white;
 }
